@@ -15,6 +15,7 @@ import Advantages from './components/Advantages';
 import Pricing from './components/Pricing';
 import { Legal } from './components/Legal';
 import { Privacy } from './components/Privacy';
+import NotFound from './components/NotFound';
 
 // スクロール位置をリセットするコンポーネント
 function ScrollToTop() {
@@ -84,6 +85,7 @@ function App() {
             <Route path="/" element={<MainContent />} />
             <Route path="/legal" element={<Legal />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         )}
       </AnimatePresence>
