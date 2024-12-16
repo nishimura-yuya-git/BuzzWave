@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -8,6 +9,7 @@ import Curriculum from './components/Curriculum';
 import Results from './components/Results';
 import Benefits from './components/Benefits';
 import FAQ from './components/FAQ';
+import LoadingScreen from './components/LoadingScreen';
 import './index.css';
 import Advantages from './components/Advantages';
 import Pricing from './components/Pricing';
@@ -69,14 +71,22 @@ function MainContent() {
 }
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <Router>
-      <ScrollToTop /> {/* スクロール位置をリセットするコンポーネントを追加 */}
-      <Routes>
-        <Route path="/" element={<MainContent />} />
-        <Route path="/legal" element={<Legal />} />
-        <Route path="/privacy" element={<Privacy />} />
-      </Routes>
+      <ScrollToTop />
+      <AnimatePresence mode="wait">
+        {isLoading ? (
+          <LoadingScreen setIsLoading={setIsLoading} />
+        ) : (
+          <Routes>
+            <Route path="/" element={<MainContent />} />
+            <Route path="/legal" element={<Legal />} />
+            <Route path="/privacy" element={<Privacy />} />
+          </Routes>
+        )}
+      </AnimatePresence>
     </Router>
   );
 }
