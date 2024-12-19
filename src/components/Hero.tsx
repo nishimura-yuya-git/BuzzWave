@@ -28,7 +28,7 @@ const BackgroundImage = () => (
 export default function Hero({ id }: HeroProps) {
   return (
     <section id={id} className="relative">
-      <div className="relative min-h-screen flex items-center md:pt-32 pt-20 overflow-hidden">
+      <div className="relative min-h-screen flex items-center md:pt-32 pt-8 overflow-hidden">
         <BackgroundImage />
         
         <Container className="relative z-20">
