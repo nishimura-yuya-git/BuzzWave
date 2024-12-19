@@ -43,7 +43,7 @@ const AIBusinessHero = ({ id }: AIBusinessHeroProps) => {
   ];
 
   return (
-    <div id={id} className="min-h-screen bg-[#1d40ae] text-white relative overflow-hidden py-12">
+    <div id={id} className="min-h-screen bg-[#1d40ae] text-white relative overflow-hidden pt-32 md:pt-20 -mb-16 md:mb-0">
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           initial={{ opacity: 0 }}
@@ -85,11 +85,11 @@ const AIBusinessHero = ({ id }: AIBusinessHeroProps) => {
                       {content.lines.map((line, index) => (
                         <div
                           key={index}
-                          className={`text-transparent text-[${index === 0 ? '29px' : '35px'}] md:text-8xl font-bold leading-9 ${
+                          className={`text-transparent text-[${index === 0 ? '29px' : '35px'}] text-2xl md:text-8xl font-bold leading-9 ${
                             index === 0 ? '-mt-3 md:-mt-11' : 'mt-3 md:pt-10 md:-mt-8'
                           }`}
                           style={{
-                            WebkitTextStroke: '1px rgba(255,255,255,0.1)',
+                            WebkitTextStroke: '0.5px rgba(255,255,255,0.3)',
                             fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
                           }}
                         >
@@ -143,6 +143,20 @@ const AIBusinessHero = ({ id }: AIBusinessHeroProps) => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="absolute bottom-12 right-12 w-64 md:w-[660px] hidden md:block"
+        >
+          <img
+            src="/images/Features.png"
+            alt="Features"
+            className="w-full h-auto"
+          />
+        </motion.div>
       </div>
     </div>
   );
