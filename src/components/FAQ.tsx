@@ -146,9 +146,12 @@ export default function FAQ({ id }: FAQProps) {
 
               <div className="flex justify-center">
                 <div className="h-[72px] flex items-center">
-                  <motion.button 
+                <motion.a 
+                    href="https://lpfunnnel.yoshiki-buzz.com/line/open/JbYM7MdQ88vT?mtid=NDT2gMeM1gZU"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="
-                      block
+                      inline-block
                       text-white 
                       px-8 
                       py-4 
@@ -167,14 +170,11 @@ export default function FAQ({ id }: FAQProps) {
                       active:translate-y-[3px]
                       active:border-b-[2px]
                       active:bg-amber-500
+                      text-center
                     "
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
                   >
                     無料相談に申し込む ▶
-                  </motion.button>
+                  </motion.a>
                 </div>
               </div>
             </div>

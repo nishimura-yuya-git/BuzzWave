@@ -98,8 +98,12 @@ export default function Header() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <button 
+              <a 
+                href="https://lpfunnnel.yoshiki-buzz.com/line/open/JbYM7MdQ88vT?mtid=NDT2gMeM1gZU"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="
+                  inline-block
                   bg-blue-600
                   text-white 
                   px-6 
@@ -114,10 +118,11 @@ export default function Header() {
                   hover:translate-y-[3px]
                   hover:border-b-[2px]
                   hover:bg-blue-500
+                  text-center
                 "
               >
                 無料相談はこちら ▶
-              </button>
+              </a>
             </motion.div>
           </div>
 
@@ -235,7 +240,10 @@ export default function Header() {
                   transition={{ duration: 0.3, delay: navigation.length * 0.05 }}
                 >
                   <div className="h-[72px] flex items-center">
-                    <button
+                    <a
+                      href="https://lpfunnnel.yoshiki-buzz.com/line/open/JbYM7MdQ88vT?mtid=NDT2gMeM1gZU"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="
                         block
                         text-white 
@@ -254,10 +262,11 @@ export default function Header() {
                         hover:border-b-[2px]
                         hover:bg-blue-500
                         w-full
+                        text-center
                       "
                     >
                       無料相談はこちら ▶
-                    </button>
+                    </a>
                   </div>
                 </motion.div>
               </div>

@@ -10,7 +10,10 @@ function ConsultButton({ isStandard }: { isStandard: boolean }) {
       <div className="relative isolate">
         <div className="absolute inset-x-0 -bottom-1.5 h-6 bg-gray-200 rounded-lg" />
         
-        <motion.button 
+        <motion.a
+          href="https://lpfunnnel.yoshiki-buzz.com/line/open/JbYM7MdQ88vT?mtid=NDT2gMeM1gZU"
+          target="_blank"
+          rel="noopener noreferrer"
           className="
             relative
             w-full
@@ -25,11 +28,12 @@ function ConsultButton({ isStandard }: { isStandard: boolean }) {
             duration-200
             hover:translate-y-1.5
             active:translate-y-1.5
+            text-center
+            inline-block
           "
-          // whileTap={{ scale: 0.98 }}
         >
           無料相談へ申し込む
-        </motion.button>
+        </motion.a>
       </div>
     );
   }
@@ -38,27 +42,32 @@ function ConsultButton({ isStandard }: { isStandard: boolean }) {
     <div className="relative isolate">
       <div className="absolute inset-x-0 -bottom-1.5 h-6 bg-blue-800 rounded-lg" />
       
-      <motion.button 
+      <motion.a
+        href="https://lpfunnnel.yoshiki-buzz.com/line/open/JbYM7MdQ88vT?mtid=NDT2gMeM1gZU"
+        target="_blank"
+        rel="noopener noreferrer" 
         className="
-          relative
-          w-full
-          bg-blue-600
-          text-white
-          font-bold
-          px-6
-          py-3
-          rounded-lg
-          transform-gpu
-          transition-transform
-          duration-200
-          hover:translate-y-1.5
-          active:translate-y-1.5
+            relative
+            w-full
+            bg-blue-600
+            text-white
+            font-bold
+            px-6
+            py-3
+            rounded-lg
+            transform-gpu
+            transition-transform
+            duration-200
+            hover:translate-y-1.5
+            active:translate-y-1.5
+            text-center
+            inline-block
         "
         // whileHover={{ scale: 1.02 }}
         // whileTap={{ scale: 0.98 }}
       >
         無料相談へ申し込む
-      </motion.button>
+      </motion.a>
     </div>
   );
 }
