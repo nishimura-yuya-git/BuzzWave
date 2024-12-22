@@ -167,8 +167,8 @@ export default function Advantages() {
       </div>
 
       {/* CTAセクション */}
-{/* キャッチコピーセクション */}
-<div className="mt-32 relative">
+      {/* キャッチコピーセクション */}
+      <div className="mt-32 relative">
         {/* グラデーションの背景 */}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-800/90 to-blue-900/80" />
         
@@ -183,22 +183,24 @@ export default function Advantages() {
               transition={{ duration: 0.8 }}
             >
               <motion.h2
-                className="text-3xl md:text-4xl font-bold text-white"
+                className="text-3xl md:text-4xl font-bold text-white leading-relaxed md:leading-normal"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                AI時代を切り開く、あなたの第一歩。
+                <span className="block md:inline">AI時代を切り開く、</span>
+                <span className="block md:inline">あなたの第一歩。</span>
               </motion.h2>
               <motion.p
-                className="text-xl md:text-2xl text-blue-100"
+                className="text-xl md:text-2xl text-blue-100 leading-relaxed mt-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                未経験からでも、着実に成長できる学習環境
+                <span className="block md:inline">未経験からでも、</span>
+                <span className="block md:inline">着実に成長できる学習環境</span>
               </motion.p>
             </motion.div>
 
