@@ -65,7 +65,7 @@ const Benefits = ({ id }: BenefitsProps) => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <motion.div 
-              className="text-transparent text-[50px] md:text-8xl font-bold leading-tight -mt-10 md:-mt-14 px-2"
+              className="text-transparent text-[46px] md:text-8xl font-bold leading-tight -mt-7 md:-mt-14 px-2"
               style={{
                 WebkitTextStroke: '1px rgba(255,255,255,0.4)',
                 fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
@@ -75,7 +75,7 @@ const Benefits = ({ id }: BenefitsProps) => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              special feature
+              Special Feature
             </motion.div>
           </motion.div>
 

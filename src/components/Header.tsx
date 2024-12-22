@@ -21,9 +21,9 @@ export default function Header() {
 
   const navigation = [
     { name: '特徴', href: 'features' },
-    { name: '実績', href: 'results' },
+    { name: '受講者実績', href: 'results' },
     { name: 'カリキュラム', href: 'curriculum' },
-    { name: '大特典', href: 'benefits' },
+    { name: '10大特典', href: 'benefits' },
     { name: 'FAQ', href: 'faq' }
   ];
 

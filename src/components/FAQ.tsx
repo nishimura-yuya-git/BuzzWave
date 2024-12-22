@@ -54,7 +54,7 @@ export default function FAQ({ id }: FAQProps) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                question
+                Question
               </motion.div>
             </motion.div>
 
@@ -108,41 +108,75 @@ export default function FAQ({ id }: FAQProps) {
             ))}
           </motion.div>
 
-          <motion.div 
-            className="flex justify-center mt-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <div className="h-[72px] flex items-center">
-              <motion.button 
-                className="
-                  block
-                  text-white 
-                  px-8 
-                  py-4 
-                  mt-10
-                  rounded-lg 
-                  text-xl 
-                  font-bold 
-                  bg-blue-600
-                  border-b-[5px]
-                  border-blue-800
-                  shadow-[0_3px_5px_rgba(0,0,0,0.3)]
-                  transition-all
-                  duration-200
-                  hover:translate-y-[3px]
-                  hover:border-b-[1.5px]
-                  active:translate-y-[3px]
-                  active:border-b-[2px]
-                  active:bg-blue-500
-                "
+          {/* キャッチコピーとCTAセクション */}
+          <div className="mt-20 relative -mx-[calc((100vw-100%)/2)] left-[calc((100vw-100%)/2)]e">
+            {/* グラデーションの背景 */}
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-800/90 to-blue-900/80 w-screen" />
+            
+            {/* コンテンツ */}
+            <div className="relative py-20 px-12">
+              <motion.div
+                className="text-center mb-12 space-y-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
               >
-                無料相談に申し込む  ▶
-              </motion.button>
+                <motion.h2
+                  className="text-3xl md:text-4xl font-bold text-white"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  AI時代を切り開く、あなたの第一歩。
+                </motion.h2>
+                <motion.p
+                  className="text-xl md:text-2xl text-blue-100"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  未経験からでも、着実に成長できる学習環境
+                </motion.p>
+              </motion.div>
+
+              <div className="flex justify-center">
+                <div className="h-[72px] flex items-center">
+                  <motion.button 
+                    className="
+                      block
+                      text-white 
+                      px-8 
+                      py-4 
+                      rounded-lg 
+                      text-xl 
+                      font-bold 
+                      bg-amber-500
+                      border-b-[5px]
+                      border-amber-700
+                      shadow-[0_3px_5px_rgba(0,0,0,0.3)]
+                      transition-all
+                      duration-200
+                      hover:translate-y-[3px]
+                      hover:border-b-[1.5px]
+                      hover:bg-amber-500
+                      active:translate-y-[3px]
+                      active:border-b-[2px]
+                      active:bg-amber-500
+                    "
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                  >
+                    無料相談に申し込む ▶
+                  </motion.button>
+                </div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </Container>
       </Section>
     </section>

@@ -243,7 +243,7 @@ export default function Results({ id }: { id: string }) {
           transition={{ duration: 0.5, delay: 1 }}
         >
           <p className="text-white/80 text-lg">
-            ※ 2023年度実績
+            ※ 2024年度実績
           </p>
         </motion.div>
       </Container>

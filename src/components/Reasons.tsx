@@ -87,7 +87,7 @@ export default function Reasons() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              reason
+              Reason
             </motion.div>
           </motion.div>
 

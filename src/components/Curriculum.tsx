@@ -2,51 +2,22 @@ import { motion } from 'framer-motion';
 import Container from './ui/Container';
 import Section from './ui/Section';
 import { CurriculumPhase } from './CurriculumPhase';
-
-const phases = [
-  {
-    title: "「ゼロ→イチ」フェーズ",
-    steps: [
-      "AIビジネスの基本原則を理解する",
-      "AIとSNSでマネタイズする流れの習得",
-      "収益条件を満たし、ゼロイチ突破達成"
-    ],
-    level: "0→1"
-  },
-  {
-    title: "「イチ→ジュウ」フェーズ",
-    steps: [
-      "独自商品を販売してより安定した収入を獲得",
-      "AIを使って商品が売れる「パターン」を仕組み化",
-      "商品の満足度や顧客の成果の再現性を高める"
-    ],
-    level: "1→10"
-  },
-  {
-    title: "「ジュウ→ヒャク」フェーズ",
-    steps: [
-      "広告運用の内製化と商品力の強化",
-      "内部管理体制のマニュアル化と組織づくり",
-      "スケールアップを狙い年商「億」を超える事業家へ"
-    ],
-    level: "10→100"
-  }
-];
+import { CurriculumPhaseData } from './types';
 
 interface CurriculumProps {
   id: string;
 }
 
-export default function Curriculum({ id }: CurriculumProps) {
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.3
-      }
-    }
-  };
+const phaseContent: CurriculumPhaseData = {
+  mainSteps: [
+    "過去の経験や強みからビジネスの「タネ」を発掘",
+    "事業の方向性を定めてまずは小さくテスト販売",
+    "独自商品を1つ販売してゼロイチ突破をゴールに"
+  ],
+  details: []  // DetailCardコンポーネント内で定義
+};
 
+export default function Curriculum({ id }: CurriculumProps) {
   return (
     <section id={id}>
       <Section className="bg-[#1d40ae]">
@@ -63,14 +34,14 @@ export default function Curriculum({ id }: CurriculumProps) {
                 className="text-transparent text-[56px] md:text-8xl font-bold leading-tight -mt-12 md:-mt-14 px-2"
                 style={{
                   WebkitTextStroke: '1px rgba(255,255,255,0.4)',
-                  fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+                  fontFamily: 'ui-sans-serif, system-ui, sans-serif',
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                curriculum
+                Curriculum
               </motion.div>
             </motion.div>
 
@@ -87,37 +58,9 @@ export default function Curriculum({ id }: CurriculumProps) {
             </motion.div>
           </div>
           
-          <motion.div 
-            className="space-y-8 mt-12"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {phases.map((phase, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 50 },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      duration: 0.8,
-                      ease: "easeOut"
-                    }
-                  }
-                }}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
-                <CurriculumPhase 
-                  {...phase}
-                  imageNumber={index + 1} 
-                />
-              </motion.div>
-            ))}
-          </motion.div>
+          <div className="mt-12">
+            <CurriculumPhase {...phaseContent} />
+          </div>
         </Container>
       </Section>
     </section>
