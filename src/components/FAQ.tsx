@@ -122,23 +122,25 @@ export default function FAQ({ id }: FAQProps) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <motion.h2
-                  className="text-3xl md:text-4xl font-bold text-white"
+                                <motion.h2
+                  className="text-3xl md:text-4xl font-bold text-white leading-relaxed md:leading-normal"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  AI時代を切り開く、あなたの第一歩。
+                  <span className="block md:inline">AI時代を切り開く、</span>
+                  <span className="block md:inline">あなたの第一歩。</span>
                 </motion.h2>
                 <motion.p
-                  className="text-xl md:text-2xl text-blue-100"
+                  className="text-xl md:text-2xl text-blue-100 leading-relaxed mt-4"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  未経験からでも、着実に成長できる学習環境
+                  <span className="block md:inline">未経験からでも</span>
+                  <span className="block md:inline">着実に成長できる学習環境</span>
                 </motion.p>
               </motion.div>
 
