@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export function Privacy() {
   return (
-    <div className="min-h-screen bg-[#1e3a8a] flex flex-col">
+    <div className="min-h-screen bg-[#1d40ae] flex flex-col">
       <div className="flex-grow">
         {/* シンプルなヘッダー */}
         <header className="w-full fixed top-0 left-0 z-50">
