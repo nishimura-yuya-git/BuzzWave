@@ -1,9 +1,18 @@
 import { Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Meta } from './SEO';
 
 export function Legal() {
   return (
     <div className="min-h-screen bg-[#1d40ae] flex flex-col">
+      <Meta 
+        title="特定商取引法に基づく表記 | BuzzWave"
+        description="BuzzWaveの特定商取引法に基づく表記。サービスの提供者情報や取引条件、支払い方法、返品・キャンセルポリシーなど、法律で定められた表記事項をご確認いただけます。"
+        keywords="BuzzWave,buzzwave,特定商取引法,特商法,利用規約,取引条件,キャンセルポリシー,返品規定,法的開示"
+        ogTitle="特定商取引法に基づく表記 | BuzzWave"
+        ogDescription="BuzzWaveの特定商取引法に基づく表記。サービスの提供者情報や取引条件について確認できます。"
+        canonicalUrl="https://wave.leanstack-buzz.com/legal"
+      />
       <div className="flex-grow">
         {/* シンプルなヘッダー */}
         <header className="w-full fixed top-0 left-0 z-50">
@@ -92,30 +101,6 @@ export function Legal() {
           </div>
         </div>
       </div>
-
-      {/* フッター */}
-      <footer className="bg-gray-900 text-white py-12 mt-auto">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center gap-8">
-            <img 
-              src="/images/BuzzWave.png"
-              alt="BuzzWave Logo"
-              className="h-24"
-            />
-            
-            <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-gray-400">
-              <Link to="/legal" className="hover:text-white transition-colors">
-                特定商取引法に基づく表記
-              </Link>
-              <Link to="/privacy" className="hover:text-white transition-colors">
-                プライバシーポリシー
-              </Link>
-            </div>
-
-            <p className="text-gray-400">© 2024 BuzzWave All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
