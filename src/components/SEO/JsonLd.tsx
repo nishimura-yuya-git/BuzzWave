@@ -1,10 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 
 interface JsonLdProps {
-    type: 'Organization' | 'LocalBusiness' | 'Service' | 'WebSite' | 'Course';
-    data: Record<string, any>;
-  }
-  
+  type: 'Organization' | 'LocalBusiness' | 'Service' | 'WebSite' | 'Course';
+  data: Record<string, any>;
+}
+
 export const JsonLd = ({ type, data }: JsonLdProps) => {
   const baseSchema = {
     '@context': 'https://schema.org',
@@ -20,10 +20,9 @@ export const JsonLd = ({ type, data }: JsonLdProps) => {
     </Helmet>
   );
 };
-  
-// Default JSON-LD implementation
+
 export const DefaultJsonLd = () => {
-  const domain = 'https://buzzwave.jp';
+  const domain = 'https://wave.leanstack-buzz.com';
   
   const websiteData = {
     '@type': 'WebSite',
@@ -38,10 +37,16 @@ export const DefaultJsonLd = () => {
   };
 
   const organizationData = {
+    '@type': 'Organization',
     name: '株式会社Lean Stack',
     url: domain,
-    logo: `${domain}/images/BuzzWave.png`,
-    sameAs: [],
+    logo: {
+      '@type': 'ImageObject',
+      url: `${domain}/images/BuzzWave.png`,
+      width: '180',
+      height: '60'
+    },
+    sameAs: [], // ソーシャルメディアのURLを追加
     address: {
       '@type': 'PostalAddress',
       streetAddress: '南久宝寺町1丁目7-8-1110',
@@ -49,10 +54,18 @@ export const DefaultJsonLd = () => {
       addressRegion: '大阪府',
       postalCode: '541-0057',
       addressCountry: 'JP'
-    }
+    },
+    contactPoint: [{
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      email: 'leanstackbuzz@gmail.com',
+      areaServed: 'JP',
+      availableLanguage: ['Japanese']
+    }]
   };
 
   const courseData = {
+    '@type': 'Course',
     name: 'BuzzWave AIビジネスマスターコース',
     description: 'AIスキルの習得から収益化まで、実践的なカリキュラムで学べる総合プログラム。',
     provider: {
@@ -60,26 +73,50 @@ export const DefaultJsonLd = () => {
       name: '株式会社Lean Stack',
       url: domain
     },
-    offers: [
+    hasCourseInstance: [
       {
-        '@type': 'Offer',
+        '@type': 'CourseInstance',
         name: 'ノーマルコース',
         description: '6ヶ月間の基本プログラム',
-        price: '500000',
-        priceCurrency: 'JPY',
+        courseMode: ['online'],
         duration: 'P6M',
-        availability: 'https://schema.org/InStock'
+        offer: {
+          '@type': 'Offer',
+          price: '500000',
+          priceCurrency: 'JPY',
+          availability: 'https://schema.org/InStock',
+          validFrom: '2024-01-01',
+          validThrough: '2024-12-31'
+        }
       },
       {
-        '@type': 'Offer',
+        '@type': 'CourseInstance',
         name: 'スタンダードコース',
         description: '12ヶ月間の総合プログラム',
-        price: '900000',
-        priceCurrency: 'JPY',
-        duration: 'P12M',
-        availability: 'https://schema.org/InStock'
+        courseMode: ['online'],
+        duration: 'P1Y',
+        offer: {
+          '@type': 'Offer',
+          price: '900000',
+          priceCurrency: 'JPY',
+          availability: 'https://schema.org/InStock',
+          validFrom: '2024-01-01',
+          validThrough: '2024-12-31'
+        }
       }
-    ]
+    ],
+    educationalLevel: 'beginner',
+    learningResourceType: 'Course',
+    teaches: [
+      'AIビジネス戦略',
+      'AI活用スキル',
+      'デジタルマーケティング',
+      'ビジネスプランニング'
+    ],
+    category: ['AI/Business Training', 'Professional Development'],
+    coursePrerequisites: '基本的なPCスキル',
+    timeRequired: 'P6M',
+    availableLanguage: ['Japanese']
   };
 
   return (
