@@ -80,7 +80,15 @@ export const DefaultJsonLd = () => {
       priceCurrency: 'JPY',
       availability: 'https://schema.org/InStock',
       validFrom: '2024-01-01',
-      validThrough: '2024-12-31'
+      validThrough: '2024-12-31',
+      category: 'Professional Online Course',
+      itemCondition: 'https://schema.org/NewCondition',
+      offerCount: 2,
+      seller: {
+        '@type': 'Organization',
+        name: '株式会社Lean Stack',
+        url: domain
+      }
     },
     hasCourseInstance: [
       {
