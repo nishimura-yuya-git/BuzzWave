@@ -4,19 +4,19 @@ import Container from './ui/Container';
 const achievementImages = [
  { 
    src: "/images/Trackrecord200.png", 
-   size: "w-56 md:w-96 md:h-96",
+   size: "w-72 md:w-96 md:h-96",
  },
  { 
    src: "/images/Trackrecord100.png", 
-   size: "w-52 md:w-80 md:h-80",
+   size: "w-64 md:w-80 md:h-80",
  },
  { 
    src: "/images/Trackrecord50.png", 
-   size: "w-52 md:w-80 md:h-80",
+   size: "w-64 md:w-80 md:h-80",
  },
  { 
    src: "/images/Trackrecord10.png", 
-   size: "w-52 md:w-80 md:h-80",
+   size: "w-64 md:w-80 md:h-80",
  }
 ];
 
