@@ -73,6 +73,15 @@ export const DefaultJsonLd = () => {
       name: '株式会社Lean Stack',
       url: domain
     },
+    offers: {
+      '@type': 'AggregateOffer',
+      lowPrice: '500000',
+      highPrice: '900000',
+      priceCurrency: 'JPY',
+      availability: 'https://schema.org/InStock',
+      validFrom: '2024-01-01',
+      validThrough: '2024-12-31'
+    },
     hasCourseInstance: [
       {
         '@type': 'CourseInstance',
@@ -84,10 +93,13 @@ export const DefaultJsonLd = () => {
         courseSchedule: {
           '@type': 'Schedule',
           duration: 'P6M',
-          repeatFrequency: 'P1W',
-          byDay: ['WE'],
+          repeatFrequency: 'Weekly',
+          repeatCount: 26,
+          byDay: 'https://schema.org/Wednesday',
           startDate: '2024-01-01',
-          endDate: '2024-12-31'
+          endDate: '2024-12-31',
+          startTime: '19:00',
+          endTime: '21:30'
         },
         offer: {
           '@type': 'Offer',
@@ -108,10 +120,13 @@ export const DefaultJsonLd = () => {
         courseSchedule: {
           '@type': 'Schedule',
           duration: 'P1Y',
-          repeatFrequency: 'P1W',
-          byDay: ['WE'],
+          repeatFrequency: 'Weekly',
+          repeatCount: 52,
+          byDay: 'https://schema.org/Wednesday',
           startDate: '2024-01-01',
-          endDate: '2024-12-31'
+          endDate: '2024-12-31',
+          startTime: '19:00',
+          endTime: '22:00'
         },
         offer: {
           '@type': 'Offer',
