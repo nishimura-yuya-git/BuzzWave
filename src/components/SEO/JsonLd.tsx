@@ -80,6 +80,15 @@ export const DefaultJsonLd = () => {
         description: '6ヶ月間の基本プログラム',
         courseMode: ['online'],
         duration: 'P6M',
+        courseWorkload: 'P2H30M',
+        courseSchedule: {
+          '@type': 'Schedule',
+          duration: 'P6M',
+          repeatFrequency: 'P1W',
+          byDay: ['WE'],
+          startDate: '2024-01-01',
+          endDate: '2024-12-31'
+        },
         offer: {
           '@type': 'Offer',
           price: '500000',
@@ -95,6 +104,15 @@ export const DefaultJsonLd = () => {
         description: '12ヶ月間の総合プログラム',
         courseMode: ['online'],
         duration: 'P1Y',
+        courseWorkload: 'P3H',
+        courseSchedule: {
+          '@type': 'Schedule',
+          duration: 'P1Y',
+          repeatFrequency: 'P1W',
+          byDay: ['WE'],
+          startDate: '2024-01-01',
+          endDate: '2024-12-31'
+        },
         offer: {
           '@type': 'Offer',
           price: '900000',
