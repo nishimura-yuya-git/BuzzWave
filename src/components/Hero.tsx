@@ -20,12 +20,49 @@ const BackgroundImage = () => (
           backfaceVisibility: 'hidden',
           WebkitBackfaceVisibility: 'hidden',
         }}
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
       />
     </div>
   </div>
 );
 
+// 成果指標画像
+const AchievementImage = ({
+  src,
+  alt,
+  index
+}: {
+  src: string;
+  alt: string;
+  index: number;
+}) => (
+  <motion.div
+    key={index}
+    className="relative overflow-hidden rounded-lg shadow-lg"
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+  >
+    <img
+      src={src}
+      alt={alt}
+      className="w-full h-auto rounded-lg transition-transform duration-300"
+      loading={index === 0 ? "eager" : "lazy"}
+      decoding="async"
+    />
+  </motion.div>
+);
+
 export default function Hero({ id }: HeroProps) {
+  // 実績画像データ
+  const achievementImages = [
+    { src: "/images/trackrecord1.png", alt: "実績1" },
+    { src: "/images/trackrecord2.png", alt: "実績2" },
+    { src: "/images/trackrecord3.png", alt: "実績3" }
+  ];
+
   return (
     <section id={id} className="relative">
       <div className="relative min-h-screen flex items-center md:pt-32 pt-8 overflow-hidden">
@@ -64,24 +101,12 @@ export default function Hero({ id }: HeroProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                 >
-                  {[
-                    { src: "/images/trackrecord1.png", alt: "実績1" },
-                    { src: "/images/trackrecord2.png", alt: "実績2" },
-                    { src: "/images/trackrecord3.png", alt: "実績3" }
-                  ].map((image, index) => (
-                    <motion.div
+                  {achievementImages.map((image, index) => (
+                    <AchievementImage
                       key={index}
-                      className="relative overflow-hidden rounded-lg shadow-lg"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                    >
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-auto rounded-lg transition-transform duration-300"
-                      />
-                    </motion.div>
+                      {...image}
+                      index={index}
+                    />
                   ))}
                 </motion.div>
               </div>
@@ -97,6 +122,8 @@ export default function Hero({ id }: HeroProps) {
                 src="/images/mainvisualright.png"
                 alt="Main Visual Right"
                 className="w-full h-auto scale-150 transform origin-center"
+                loading="eager"
+                decoding="async"
               />
             </motion.div>
           </div>
