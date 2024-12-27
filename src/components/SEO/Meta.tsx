@@ -11,19 +11,23 @@ interface MetaProps {
   twitterCard?: string;
   canonicalUrl?: string;
   noindex?: boolean;
+  lang?: string;
+  schema?: Record<string, any>[];
 }
 
 export const Meta = ({
-  title = 'BuzzWave | AI時代を切り開くあなたの第一歩',
-  description = 'BuzzWaveはAIスキルの習得から収益化まで、あなたのビジネス成功をトータルにサポート。未経験からでもAI時代のビジネススキルが身につく、実践的なカリキュラムを提供します。',
-  keywords = 'BuzzWave,buzzwave,AI学習,ai学習,AI副業,ai副業,AIビジネス,aiビジネス,AI活用,ai活用,AIスキル,aiスキル,スキルアップ,副業,独立,ビジネススクール,オンラインスクール,AI教育,ai教育,デジタルマーケティング,digital marketing,収益化,monetization,キャリアアップ,career up,AI人材育成,ai人材育成,AI転職,ai転職,人工知能,artificial intelligence,AI講座,ai講座,AI事業,ai事業,オンライン学習,online learning,プログラミング学習,programming,AI開発,ai開発,ChatGPT,chatgpt,AI研修,ai研修,ビジネスAI,ビジネスai,AI活用ビジネス,ai活用ビジネス,AI収益化,ai収益化',
+  title = 'BuzzWave｜AI時代のビジネスを加速させるオンラインスクール',
+  description = 'BuzzWaveは、AI技術とChatGPTを活用したビジネススキルを0から学べるオンラインスクール。実践的なカリキュラムで、未経験から最短で収益化を実現。多くの受講生が月額10万円以上の収入を達成。AI時代のビジネススキルを身につけ、あなたの可能性を広げませんか？',
+  keywords = 'BuzzWave,AI学習,AI副業,AIビジネス,ChatGPT,AI収益化,オンラインスクール,AI教育,デジタルマーケティング,ビジネススクール,AI活用,プログラミング,AI開発,人工知能,スキルアップ,副業,独立',
   ogTitle,
   ogDescription,
-  ogImage = '/images/BuzzWaveOG.png',
-  ogUrl = 'https://wave.leanstack-buzz.com',
+  ogImage = '/images/ogp.jpg',
+  ogUrl,
   twitterCard = 'summary_large_image',
   canonicalUrl,
-  noindex = false
+  noindex = false,
+  lang = 'ja',
+  schema = []
 }: MetaProps) => {
   const domain = 'https://wave.leanstack-buzz.com';
   const fullTitle = `${title}`;
@@ -31,6 +35,7 @@ export const Meta = ({
   return (
     <Helmet>
       {/* 基本設定 */}
+      <html lang={lang} />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -42,46 +47,59 @@ export const Meta = ({
       <meta property="og:url" content={ogUrl || `${domain}${window.location.pathname}`} />
       <meta property="og:image" content={`${domain}${ogImage}`} />
       <meta property="og:site_name" content="BuzzWave" />
+      <meta property="og:locale" content="ja_JP" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:site" content="@BuzzWave" />
+      <meta name="twitter:creator" content="@BuzzWave" />
       <meta name="twitter:title" content={ogTitle || title} />
       <meta name="twitter:description" content={ogDescription || description} />
       <meta name="twitter:image" content={`${domain}${ogImage}`} />
-      
-      {/* 言語設定 */}
-      <html lang="ja" />
-      <meta httpEquiv="content-language" content="ja" />
       
       {/* インデックス制御 */}
       {noindex ? (
         <meta name="robots" content="noindex,nofollow" />
       ) : (
         <>
-          <meta name="robots" content="index,follow,max-image-preview:large" />
+          <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
           <meta name="googlebot" content="index,follow" />
+          <meta name="bingbot" content="index,follow" />
         </>
       )}
       
-      {/* canonical URL */}
+      {/* リンク関連 */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      <link rel="alternate" href={`${domain}${window.location.pathname}`} hrefLang="ja" />
+      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
       
-      {/* レスポンシブ・互換性設定 */}
+      {/* モバイル最適化 */}
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      
-      {/* その他の設定 */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="theme-color" content="#1d40ae" />
+      
+      {/* PWA対応 */}
+      <link rel="manifest" href="/manifest.json" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content={fullTitle} />
-
-      {/* PWAサポート */}
-      <link rel="manifest" href="/manifest.json" />
       <link rel="apple-touch-icon" href="/images/icon-192x192.png" />
+      
+      {/* アクセシビリティ */}
+      <meta name="application-name" content="BuzzWave" />
+      <meta httpEquiv="x-dns-prefetch-control" content="on" />
+      <link rel="dns-prefetch" href={domain} />
+      <link rel="preconnect" href={domain} />
+      
+      {/* スキーママークアップ */}
+      {schema.map((item, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(item)}
+        </script>
+      ))}
     </Helmet>
   );
 };

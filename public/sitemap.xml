@@ -1,21 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- トップページ -->
   <url>
     <loc>https://wave.leanstack-buzz.com/</loc>
-    <lastmod>2024-12-23</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <!-- メインビジュアル画像 -->
+    <image:image>
+      <image:loc>https://wave.leanstack-buzz.com/images/mainvisual.jpg</image:loc>
+      <image:title>BuzzWave メインビジュアル</image:title>
+      <image:caption>AI時代のビジネスを加速させるオンラインスクール</image:caption>
+    </image:image>
+    <!-- OGP画像 -->
+    <image:image>
+      <image:loc>https://wave.leanstack-buzz.com/images/ogp.jpg</image:loc>
+      <image:title>BuzzWave | AI時代のビジネスを加速させるオンラインスクール</image:title>
+      <image:caption>実践的なAIスキル習得カリキュラム</image:caption>
+    </image:image>
+    <!-- コース説明用画像 -->
+    <image:image>
+      <image:loc>https://wave.leanstack-buzz.com/images/curriculum01_1.png</image:loc>
+      <image:title>BuzzWave カリキュラム概要</image:title>
+      <image:caption>ビジネス全体像と基本原則の理解</image:caption>
+    </image:image>
+    <!-- 実績画像 -->
+    <image:image>
+      <image:loc>https://wave.leanstack-buzz.com/images/Trackrecord200.png</image:loc>
+      <image:title>BuzzWave 受講生実績</image:title>
+      <image:caption>受講生の成果実績データ</image:caption>
+    </image:image>
   </url>
+
+  <!-- 特商法ページ -->
   <url>
     <loc>https://wave.leanstack-buzz.com/legal</loc>
-    <lastmod>2024-12-23</lastmod>
+    <lastmod>2024-12-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://wave.leanstack-buzz.com/images/BuzzWave.png</image:loc>
+      <image:title>BuzzWave ロゴ</image:title>
+      <image:caption>BuzzWave公式ロゴ</image:caption>
+    </image:image>
   </url>
+
+  <!-- プライバシーポリシーページ -->
   <url>
-    <loc>https://wave.leanstack-buzz.com/privacy</loc>
-    <lastmod>2024-12-23</lastmod>
+    <loc>https://wave.leanstack-buzz.com/legal</loc>
+    <lastmod>2024-12-27</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://wave.leanstack-buzz.com/images/BuzzWave.png</image:loc>
+      <image:title>BuzzWave ロゴ</image:title>
+      <image:caption>BuzzWave公式ロゴ</image:caption>
+    </image:image>
+  </url>
+
+  <!-- コースセクション -->
+  <url>
+    <loc>https://wave.leanstack-buzz.com/#curriculum</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://wave.leanstack-buzz.com/images/curriculum01_1.png</image:loc>
+      <image:title>AIビジネスカリキュラム</image:title>
+      <image:caption>実践的なAIビジネス学習カリキュラム</image:caption>
+    </image:image>
+  </url>
+
+  <!-- プライシングセクション -->
+  <url>
+    <loc>https://wave.leanstack-buzz.com/#pricing</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- FAQ セクション -->
+  <url>
+    <loc>https://wave.leanstack-buzz.com/#faq</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
 </urlset>
