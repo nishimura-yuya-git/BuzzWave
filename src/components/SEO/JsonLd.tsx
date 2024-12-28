@@ -86,6 +86,7 @@ export const DefaultJsonLd = () => {
       lowPrice: '500000',
       highPrice: '900000',
       priceCurrency: 'JPY',
+      category: 'Online Course',
       offers: [{
         '@type': 'Offer',
         name: 'ノーマルコース',
@@ -116,7 +117,8 @@ export const DefaultJsonLd = () => {
     hasCourseInstance: [{
       '@type': 'CourseInstance',
       courseMode: 'online',
-      duration: 'P6M'
+      duration: 'P6M',
+      courseWorkload: 'PT10H'
     }]
   };
 
