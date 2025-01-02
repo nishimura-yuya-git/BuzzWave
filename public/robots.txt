@@ -1,4 +1,9 @@
 User-agent: *
-Disallow: /api/
-Disallow: /admin/
+Allow: /
 Sitemap: https://wave.leanstack-buzz.com/sitemap.xml
+
+# クローラーへの指示を追加
+Allow: /*.html
+Allow: /*.js
+Allow: /*.css
+Allow: /images/

@@ -17,8 +17,8 @@ interface MetaProps {
 
 export const Meta = ({
   title = 'BuzzWave｜AI時代のビジネスを加速させるオンラインスクール',
-  description = 'BuzzWaveは、AI技術とChatGPTを活用したビジネススキルを0から学べるオンラインスクール。実践的なカリキュラムで、未経験から最短で収益化を実現。多くの受講生が月額10万円以上の収入を達成。AI時代のビジネススキルを身につけ、あなたの可能性を広げませんか？',
-  keywords = 'BuzzWave,AI学習,AI副業,AIビジネス,ChatGPT,AI収益化,オンラインスクール,AI教育,デジタルマーケティング,ビジネススクール,AI活用,プログラミング,AI開発,人工知能,スキルアップ,副業,独立',
+  description = 'BuzzWaveは、AI技術とChatGPTを活用したビジネススキルを0から学べる実践型オンラインスクール。未経験からでも最短で収益化を実現し、多くの受講生が月収10万円以上を達成。AI時代に必要なビジネススキルを、確実に身につけられる環境を提供します。',
+  keywords = 'BuzzWave,AI学習,AI副業,AIビジネス,ChatGPT,AI収益化,オンラインスクール,AI教育,デジタルマーケティング,ビジネススクール,AI活用,プログラミング,AI開発,人工知能,スキルアップ,副業,独立,AI転職,AI人材,AI講座,AI研修,ビジネスAI',
   ogTitle,
   ogDescription,
   ogImage = '/images/ogp.jpg',
@@ -39,6 +39,8 @@ export const Meta = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+      <meta name="author" content="BuzzWave" />
+      <meta name="copyright" content="© 2024 BuzzWave All Rights Reserved." />
       
       {/* OGP設定 */}
       <meta property="og:title" content={ogTitle || title} />
@@ -50,6 +52,7 @@ export const Meta = ({
       <meta property="og:locale" content="ja_JP" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="BuzzWave - AI時代のビジネススクール" />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
@@ -77,22 +80,27 @@ export const Meta = ({
       
       {/* モバイル最適化 */}
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-      <meta name="format-detection" content="telephone=no" />
+      <meta name="format-detection" content="telephone=no,address=no,email=no" />
       <meta name="theme-color" content="#1d40ae" />
       
       {/* PWA対応 */}
       <link rel="manifest" href="/manifest.json" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content={fullTitle} />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="BuzzWave" />
       <link rel="apple-touch-icon" href="/images/icon-192x192.png" />
+      <link rel="apple-touch-startup-image" href="/images/splash.png" />
       
-      {/* アクセシビリティ */}
-      <meta name="application-name" content="BuzzWave" />
-      <meta httpEquiv="x-dns-prefetch-control" content="on" />
-      <link rel="dns-prefetch" href={domain} />
-      <link rel="preconnect" href={domain} />
+      {/* パフォーマンス最適化 */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+      
+      {/* ソーシャルメディア検証用メタタグ */}
+      <meta name="facebook-domain-verification" content="[あなたの検証コード]" />
+      <meta name="google-site-verification" content="[あなたの検証コード]" />
       
       {/* スキーママークアップ */}
       {schema.map((item, index) => (

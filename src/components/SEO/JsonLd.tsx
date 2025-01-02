@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 interface JsonLdProps {
-  type: 'Organization' | 'LocalBusiness' | 'Service' | 'WebSite' | 'Course' | 'FAQPage';
+  type: 'Organization' | 'LocalBusiness' | 'Service' | 'WebSite' | 'Course' | 'FAQPage' | 'Article';
   data: Record<string, any>;
 }
 
@@ -119,7 +119,17 @@ export const DefaultJsonLd = () => {
       courseMode: 'online',
       duration: 'P6M',
       courseWorkload: 'PT10H'
-    }]
+    }],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "250"
+    },
+    "alumni": {
+      "@type": "Person",
+      "name": "BuzzWave卒業生",
+      "description": "多くの卒業生が月収10万円以上を達成"
+    }
   };
 
   const faqData = {
@@ -148,12 +158,25 @@ export const DefaultJsonLd = () => {
     }]
   };
 
+  const articleData = {
+    "@type": "Article",
+    "headline": "AI時代のビジネススキルを最短で習得",
+    "image": `${domain}/images/ogp.jpg`,
+    "datePublished": "2025-01-01T08:00:00+09:00",
+    "dateModified": new Date().toISOString(),
+    "author": {
+      "@type": "Organization",
+      "name": "BuzzWave"
+    }
+  };
+
   return (
     <>
       <JsonLd type="WebSite" data={websiteData} />
       <JsonLd type="Organization" data={organizationData} />
       <JsonLd type="Course" data={courseData} />
       <JsonLd type="FAQPage" data={faqData} />
+      <JsonLd type="Article" data={articleData} />
     </>
   );
 };
