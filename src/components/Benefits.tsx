@@ -53,7 +53,7 @@ const Benefits = ({ id }: BenefitsProps) => {
   return (
     <section 
       id={id} 
-      className="bg-[#1d40ae] pt-20"
+      className="bg-white pt-28"
     >
       <Container>
         <div className="relative h-[50px] md:h-[60px] mb-20">
@@ -67,7 +67,7 @@ const Benefits = ({ id }: BenefitsProps) => {
             <motion.div 
               className="text-transparent text-[46px] md:text-8xl font-bold leading-tight -mt-7 md:-mt-14 px-2"
               style={{
-                WebkitTextStroke: '1px rgba(255,255,255,0.4)',
+                WebkitTextStroke: '1px rgba(0,0,0,0.4)',
                 fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
               }}
               initial={{ opacity: 0, y: 20 }}
@@ -81,7 +81,7 @@ const Benefits = ({ id }: BenefitsProps) => {
 
           <div className="relative">
             <motion.h2 
-              className="text-[22px] font-bold px-2 text-white md:text-3xl"
+              className="text-[22px] font-bold px-2 text-black md:text-3xl"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -90,7 +90,7 @@ const Benefits = ({ id }: BenefitsProps) => {
               今だけ入会者に10大特典配布中！
             </motion.h2>
             <motion.p 
-              className="text-left text-gray-200 text-sm mt-4 px-2"
+              className="text-left text-black text-sm mt-4 px-2"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -102,7 +102,7 @@ const Benefits = ({ id }: BenefitsProps) => {
         </div>
         
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

@@ -20,7 +20,7 @@ const phaseContent: CurriculumPhaseData = {
 export default function Curriculum({ id }: CurriculumProps) {
   return (
     <section id={id}>
-      <Section className="bg-[#1d40ae]">
+      <Section className="bg-[#2148c7]">
         <Container>
           <div className="relative h-[50px] md:h-[60px]">
             <motion.div 

@@ -18,6 +18,7 @@ import { Privacy } from './components/Privacy';
 import NotFound from './components/NotFound';
 import Footer from './components/Footer';
 import { Meta, DefaultJsonLd } from './components/SEO';
+import IntroMain from './components/IntroMain';
 
 // スクロール位置をリセットするコンポーネント
 function ScrollToTop() {
@@ -67,6 +68,7 @@ function MainContent() {
             <Header />
             <main>
               <Hero id="hero" />
+              <IntroMain id="intro-main" />
               <Features id="features" />
               <Reasons />
               <Advantages />

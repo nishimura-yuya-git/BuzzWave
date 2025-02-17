@@ -32,12 +32,28 @@ const plans: Plan[] = [
       "独立・開業サポート"
     ],
     type: "standard"
+  },
+  {
+    name: "エグゼクティブコース",
+    price: "1,200,000",
+    duration: "12ヶ月",
+    features: [
+      "月4回グループコンサルティング",
+      "個別チャットサポート無制限",
+      "プロフ・コンテンツ添削無制限",
+      "会員限定TikTok講座閲覧権限",
+      "アフィリエイト案件の提供",
+      "アフィリエイト案件獲得サポート",
+      "独立・開業サポート",
+      "1on1ミーティング（月2回×12）"
+    ],
+    type: "executive"
   }
 ];
 
 export default function Pricing() {
   return (
-    <Section className='bg-[#1d40ae]'>
+    <Section className='bg-[#2148c7] md:pt-28 pt-28'>
       <Container>
         <div className="relative h-[50px] md:h-[60px] mb-20">
           <motion.div 
@@ -81,7 +97,7 @@ export default function Pricing() {
           </motion.div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <motion.div
               key={index}
@@ -103,7 +119,7 @@ export default function Pricing() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <p className="text-gray-300 text-sm">
+          <p className="text-gray-300 text-sm pb-20">
             ※ 価格は全て税込表示です
           </p>
         </motion.div>

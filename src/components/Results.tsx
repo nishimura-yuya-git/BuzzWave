@@ -47,7 +47,7 @@ const AchievementImage = ({ image, size }: { image: string; size: string; }) => 
 
 export default function Results({ id }: { id: string }) {
  return (
-   <section id={id} className="py-24 bg-[#1d40ae]">
+   <section id={id} className="py-24 bg-[#2148c7]">
      <Container>
        <div className="relative h-[50px] md:h-[60px] mb-20">
          <motion.div className="absolute inset-0">

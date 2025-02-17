@@ -1,4 +1,4 @@
-export type PlanType = 'normal' | 'standard';
+export type PlanType = "normal" | "standard" | "executive";
 
 export interface Plan {
   name: string;

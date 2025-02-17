@@ -66,7 +66,7 @@ export default function Reasons() {
   };
 
   return (
-    <Section className="bg-[#1d40ae]">
+    <Section className="bg-[#2148c7] md:pt-24">
       <Container>
         <div className="relative h-[50px] md:h-[60px] mb-16">
           <motion.div 
@@ -172,6 +172,101 @@ export default function Reasons() {
               </motion.div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* ミッションセクション */}
+        <motion.div 
+          className="mt-32 bg-white relative overflow-hidden w-screen -mx-[calc((100vw-100%)/2)]"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* コンテンツ */}
+          <div className="relative py-20 px-6">
+            <div className="max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="relative h-[50px] md:h-[60px] mb-20">
+                  <motion.div 
+                    className="absolute inset-0"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                  >
+                    <motion.div 
+                      className="text-transparent text-[56px] md:text-8xl font-bold leading-tight -mt-12 md:-mt-14 px-2"
+                      style={{
+                        WebkitTextStroke: '1px rgba(0,0,0,0.4)',
+                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+                      }}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.4 }}
+                    >
+                      Mission
+                    </motion.div>
+                  </motion.div>
+
+                  <motion.h2 
+                    className="relative text-2xl font-bold px-2 text-[#1d40ae] md:text-5xl text-3xl"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    BuzzWaveのミッション
+                  </motion.h2>
+                </div>
+                <div className="space-y-3 mb-12">
+                  <div className="text-[30px] md:text-5xl font-bold bg-gradient-to-r from-[#FF32FF] via-[#9C55FF] to-[#3B82F6] text-transparent bg-clip-text">
+                    世間の波に流されず、
+                  </div>
+                  <div className="text-[28px] md:text-5xl font-bold bg-gradient-to-r from-[#FF00FF] to-[#3B82F6] text-transparent bg-clip-text">
+                    自ら波を起こす人間へ。
+                  </div>
+                </div>
+              </motion.div>
+
+              <div className="space-y-8 text-lg md:text-xl">
+                <motion.p
+                  className="text-black/90 leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  BuzzWaveは、AIやSNSの分野で活躍できる人材を育成しています。
+                </motion.p>
+
+                <motion.p
+                  className="text-black/90 leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                >
+                  急速に拡大を続けるAI・SNS市場を舞台に、このミッションを実現するためには、多くの優れたマーケターの力が不可欠です。
+                </motion.p>
+
+                <motion.p
+                  className="text-black/90 leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  そこで私たちはSNSマーケターの育成に注力し、彼らがSNSを駆使して活躍できる場を提供することで、受講生の皆様とともに業界全体の成長を牽引していきます。
+                </motion.p>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </Container>
     </Section>

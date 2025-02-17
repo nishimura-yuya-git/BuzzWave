@@ -33,7 +33,7 @@ const faqs = [
 export default function FAQ({ id }: FAQProps) {
   return (
     <section id={id}>
-      <Section className="bg-[#1d40ae]">
+      <Section className="bg-[#2148c7] md:pt-20 pt-20">
         <Container>
           <div className="relative h-[10px] md:h-[60px] mb-20 mt-10">
             <motion.div 
@@ -111,7 +111,7 @@ export default function FAQ({ id }: FAQProps) {
           {/* キャッチコピーとCTAセクション */}
           <div className="mt-20 relative -mx-[calc((100vw-100%)/2)] left-[calc((100vw-100%)/2)]e">
             {/* グラデーションの背景 */}
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-800/90 to-blue-900/80 w-screen" />
+            <div className="absolute inset-0 bg-white w-screen" />
             
             {/* コンテンツ */}
             <div className="relative py-20 px-12">
@@ -129,8 +129,8 @@ export default function FAQ({ id }: FAQProps) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <span className="block md:inline">AI時代を切り開く、</span>
-                  <span className="block md:inline">あなたの第一歩。</span>
+                  <span className="block md:inline text-[#1d40ae]">AI時代を切り開く、</span>
+                  <span className="block md:inline text-[#1d40ae]">あなたの第一歩。</span>
                 </motion.h2>
                 <motion.p
                   className="text-xl md:text-2xl text-blue-100 leading-relaxed mt-4"
@@ -139,8 +139,8 @@ export default function FAQ({ id }: FAQProps) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  <span className="block md:inline">未経験からでも</span>
-                  <span className="block md:inline">着実に成長できる学習環境</span>
+                  <span className="block md:inline text-[#1d40ae]">未経験からでも</span>
+                  <span className="block md:inline text-[#1d40ae]">着実に成長できる学習環境</span>
                 </motion.p>
               </motion.div>
 

@@ -43,7 +43,7 @@ const AIBusinessHero = ({ id }: AIBusinessHeroProps) => {
   ];
 
   return (
-    <div id={id} className="min-h-screen bg-[#1d40ae] text-white relative overflow-hidden pt-32 md:pt-20 -mb-16 md:mb-0">
+    <div id={id} className="min-h-screen bg-[#2148c7] text-white relative overflow-hidden pt-32 md:pt-20 -mb-16 md:mb-0">
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           initial={{ opacity: 0 }}
