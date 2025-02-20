@@ -146,35 +146,47 @@ export default function FAQ({ id }: FAQProps) {
 
               <div className="flex justify-center">
                 <div className="h-[72px] flex items-center">
-                <motion.a 
-                    href="https://lpfunnnel.yoshiki-buzz.com/line/open/JbYM7MdQ88vT?mtid=NDT2gMeM1gZU"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                      inline-block
-                      text-white 
-                      px-8 
-                      py-4 
-                      rounded-lg 
-                      text-xl 
-                      font-bold 
-                      bg-amber-500
-                      border-b-[5px]
-                      border-amber-700
-                      shadow-[0_3px_5px_rgba(0,0,0,0.3)]
-                      transition-all
-                      duration-200
-                      hover:translate-y-[3px]
-                      hover:border-b-[1.5px]
-                      hover:bg-amber-500
-                      active:translate-y-[3px]
-                      active:border-b-[2px]
-                      active:bg-amber-500
-                      text-center
-                    "
+                  <motion.button
+                    whileHover={{ scale: 1 }}
+                    animate={{
+                      scale: [1, 1.1, 1],
+                    }}
+                    transition={{
+                      duration: 1.8,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                    }}
                   >
-                    無料相談に申し込む ▶
-                  </motion.a>
+                    <a 
+                      href="https://lpfunnnel.yoshiki-buzz.com/line/open/JbYM7MdQ88vT?mtid=NDT2gMeM1gZU"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        inline-block
+                        text-white 
+                        px-8 
+                        py-4 
+                        rounded-lg 
+                        text-xl 
+                        font-bold 
+                        bg-amber-500
+                        border-b-[5px]
+                        border-amber-700
+                        shadow-[0_3px_5px_rgba(0,0,0,0.3)]
+                        transition-all
+                        duration-200
+                        hover:translate-y-[3px]
+                        hover:border-b-[1.5px]
+                        hover:bg-amber-500
+                        active:translate-y-[3px]
+                        active:border-b-[2px]
+                        active:bg-amber-500
+                        text-center
+                      "
+                    >
+                      無料相談に申し込む ▶
+                    </a>
+                  </motion.button>
                 </div>
               </div>
             </div>
