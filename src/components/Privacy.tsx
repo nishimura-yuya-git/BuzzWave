@@ -93,7 +93,7 @@ export function Privacy() {
                 content: [
                   '個人情報の取扱いに関するお問い合わせは、下記までご連絡ください：',
                   '株式会社Lean Stack',
-                  '住所：大阪府大阪市中央区南久宝寺町１丁目７−８−１１１０',
+                  '住所：大阪府大阪市中央区徳井町2丁目2-13 3F',
                   'メール：leanstackbuzz@gmail.com'
                 ]
               },
