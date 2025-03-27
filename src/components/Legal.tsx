@@ -55,7 +55,7 @@ export function Legal() {
             {[
               { label: '事業者の名称', value: '株式会社Lean Stack' },
               { label: '代表者名', value: '代表取締役 吹上由樹' },
-              { label: '所在地', value: '大阪府大阪市中央区南久宝寺町1丁目7-8-1110' },
+              { label: '所在地', value: '大阪府大阪市中央区徳井町2丁目2-13 3F' },
               { label: 'メールアドレス', value: 'leanstackbuzz@gmail.com', isLink: true },
               { 
                 label: '販売価格',
